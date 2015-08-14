@@ -1,0 +1,89 @@
+﻿安装:
+Node.js
+https://nodejs.org/
+git
+http://git-scm.com/
+============================================================================================
+要改的地方:
+-----------------------------------------------------------------------
+/_config.yml
+
+line 15 
+url: http://mywebsite.github.io
+
+line 72~75
+deploy:
+  type: git
+  repository: https://github.com/mywebsite/mywebsite.github.io.git
+  branch: master
+-----------------------------------------------------------------------
+/themes/jacman/_config.yml
+
+line 2
+menu: 修改选单
+line 141
+swift_search:
+  enable: true 
+  key: ===================  ## https://swiftype.com/ 
+
+网站申请账号设定网址后会产生以下js，只要把里面的'==================='填入上方
+
+<script type="text/javascript">
+ (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+ (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+ e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+ })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+ _st('install','===================','2.0.0');
+</script>
+
+============================================================================================
+hexo 产生静态网页
+参考:
+http://blog.lmintlcx.com/post/blog-with-hexo.html
+http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/
+
+hexo
+https://hexo.io
+
+
+hexo commands:
+https://hexo.io/zh-tw/docs/commands.html
+init
+$ hexo init [folder]
+
+new
+$ hexo new [layout] <title>
+new post 
+$ hexo new "postname"
+new page folder
+$ hexo new page "foldername"
+
+server
+$ hexo server
+
+clean
+$ hexo clean
+清除快取檔案 (db.json) 和已產生的靜態檔案 (public)。
+
+generate
+$ hexo generate
+
+deploy
+$ hexo deploy
+
+============================================================================================
+如何使用 Jacman 主题
+http://wuchong.me/jacman/
+
+https://github.com/wuchong/jacman/wiki/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97
+
+============================================================================================
+website search: 
+swiftype apply account
+https://swiftype.com/
+
+http://www.jerryfu.net/post/search-engine-for-hexo-with-swiftype.html
+http://blog.moyizhou.cn/web/search-engine-for-static-pages/
+============================================================================================
+
+
